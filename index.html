@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Documentation Page - PHP Documentation</title>
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+  <!--css-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      <h1>PHP Documentation</h1>
+    </header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#What_PHP_can_do">What PHP can do</a></li>
+      <li><a class="nav-link" href="#Get_started">Get started</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+      </li>
+      <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+      <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+      <li><a class="nav-link" href="#Constants">Constants</a></li>
+      <li><a class="nav-link" href="#If_else_statement">If else statement</a></li>
+      <li><a class="nav-link" href="#While_statement">While statement</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          PHP (recursive acronym for PHP: Hypertext Preprocessor) is a
+          widely-used open source general-purpose scripting language that is
+          especially suited for web development and can be embedded into HTML.
+        </p>
+
+        <p>
+          The PHP code is delimited by 2 tags (start and end) and it doesn't
+          take many commands to display HTML using PHP, something that happens
+          in languages ​​like Perl and C.
+        </p>
+
+        <p>
+          Unlike JavaScript, PHP code is executed by the server, generating HTML
+          which is then sent to the browser.
+        </p>
+
+        <p>
+          One of the advantages of using PHP is that it is very easy to use for
+          a beginner but offers a lot of features for professionals.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="What_PHP_can_do">
+      <header>What PHP can do</header>
+      <article>
+        <p>
+          PHP is focused on server-side scripting, so you can perform tasks like
+          capturing form data, sending and receiving cookies, generating dynamic
+          content, or anything a CGI program can do. However, PHP can do much
+          more.
+        </p>
+        <p>Main areas where PHP scripts are used:</p>
+        <ul>
+          <li>
+            Server-side scripts. It is the most common area where PHP works. You
+            need 3 things for this to work: a PHP interpreter, a web server and
+            a web browser. You need to run the web server connected to a PHP
+            installation. You can access the results of your PHP program with a
+            web browser by viewing the PHP page through the web server. All of
+            this can run on your home machine if you are just trying out
+            programming with PHP.
+          </li>
+          <li>
+            Command line scripts. You can run scripts with PHP code in the
+            terminal without the need for a web server. The only thing you need
+            is the PHP interpreter installed on your machine. This usage type is
+            ideal for scripts executed using cron (Unix, Linux) or Task
+            Scheduler (on Windows). These scripts can also be used for simple
+            text processing routines.
+          </li>
+          <li>
+            Develop desktop applications. PHP is probably not the best
+            programming language for this, but if you know PHP well and want to
+            use its advanced features to build desktop applications with
+            graphical interfaces, you can use PHP-GTK which is a PHP extension
+            for that, also serving to create cross-platform applications.
+            PHP-GTK is not available in the official distribution. If
+            interested, visit the
+            <a target="_blank" href="http://gtk.php.net/">project's website</a>.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Get_started">
+      <header>Get started</header>
+      <article>
+        <p>
+          To install and configure the PHP environment on your machine, we
+          recommend following the steps in the
+          <a href="https://www.php.net/manual/pt_BR/install.php" target="_blank">official PHP documentation.</a>
+        </p>
+
+        <p>
+          Remember that you need to have the PHP interpreter, a web server and a
+          browser to run PHP scripts on the server side and you will probably
+          need to use a database management system in the future to build more
+          complete web applications.
+        </p>
+
+        <p>
+          Instead of having to download and configure each tool listed above
+          separately, you can choose to use ready-made tools like XAMPP or WAMPP
+          that come pre-configured with all the necessary features.
+        </p>
+
+        <p>
+          <a href="https://www.apachefriends.org/" target="_blank">XAMPP download link</a>
+        </p>
+
+        <p>
+          <a href="https://www.wampserver.com/en/" target="_blank">WAMP Server download link</a>
+        </p>
+
+        <p>
+          However, if you are not interested in installing and configuring a PHP
+          environment on your machine, you can run and test PHP code online on
+          dedicated websites such as <a href="" target="_blank">Codepad</a>,
+          <a href="http://writecodeonline.com/" target="_blank">WriteCodeOnline</a>,
+          <a href="https://www.mycompiler.io/" target="_blank">myCompiler</a>,
+          among others.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+        <ul>
+          <li>
+            A general understanding of the Internet and the World Wide Web
+            (WWW).
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>
+            A little knowledge of programming logic. We recommended to try one
+            of the
+            <a target="_blank"
+              href="https://www.freecodecamp.org/news/a-gentler-introduction-to-programming-1f57383a1b2c/">freeCodeCamp
+              tutorials</a>about the subject
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <article>
+        <p>
+          Create a file with the extension ".php" and put the following code in
+          it:
+        </p>
+        <code>
+        &lt;?php 
+          echo "Hello World!";
+        ?>
+        </code>
+        <p>To run the script, enter the following command in any command-line interpreter:</p>
+        <code>
+        "php -f myscript.php"
+        </code>
+
+        <p>When PHP parses a file it looks for the opening and closing tags, <code
+            class='inline'>&lt;?php and ?></code>, which tell PHP
+          to start or stop parsing the code between them. Interpretation like this allows PHP to be included in various
+          types of documents, as everything outside these tags is ignored by the PHP interpreter.</p>
+
+        <p>
+          To run the file, just start the web server (Apache) and open the file
+          in the browse.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <article>
+        <p>You use variables as symbolic names for values in your application. The names of variables, called
+          identifiers, conform to certain rules.</p>
+        <p>Variables in PHP are represented by a dollar sign ($) followed by the variable name. Variable names are
+          case-sensitive (that is, they are case-sensitive).</p>
+        <p>Variable names follow the same rules as other labels in PHP. A valid variable name starts with a letter or
+          underscore, followed by any number of letters, numbers, or underscores. In a regular expression, it could be
+          represented like this: '[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*'</p>
+        <code>
+          &lt;?php 
+          $myVar = 'some text';
+          echo $myVar;
+          $4site = 'not yet';     // not valid; starts with a number
+          $_4site = 'not yet';    // valid; starts with underscore
+          $täyte = 'mansikka';    // valid; 'ä' is an ASCII (extended) character 228
+          ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <article>
+        <p>Every expression in PHP has one of the following built-in types or values:</p>
+        <ul>
+          <li>null</li>
+          <li>bool</li>
+          <li>int</li>
+          <li>float (número de ponto flutuante)</li>
+          <li>string</li>
+          <li>array</li>
+          <li>object</li>
+          <li>callable</li>
+          <li>resource</li>
+        </ul>
+
+        <code>
+        &lt;?php
+        $a_bool = true;   // boolean
+        $a_str  = "foo";  // string
+        $a_str2 = 'foo';  // string
+        $an_int = 12;     // int
+
+        echo get_debug_type($a_bool), "\n";
+        echo get_debug_type($a_str), "\n";
+
+        if (is_int($an_int)) {
+        $an_int += 4;
+        }
+        
+        var_dump($an_int);
+
+        // If $a_bool is a string, print
+        if (is_string($a_bool)) {
+        echo "String: $a_bool";
+        }
+        ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="Function_declarations">
+      <header>Function declarations</header>
+      <article>
+        <p>A function definition (also called a function declaration, or function statement) consists of the function
+          keyword, followed by:</p>
+        <ul>
+          <li>The name of the function.</li>
+          <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+          <li>The PHP statements that define the function, enclosed in curly brackets, { }.</li>
+        </ul>
+        <code>
+        &lt;?php
+        function foo($arg_1, $arg_2, /* ..., */ $arg_n)
+        {
+          echo "Example.\n";
+          return $value_returned;
+        }
+        ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="Variable_scope">
+      <header>Variable scope</header>
+      <article>
+        <p>The scope of a variable is the context where it was defined. Most PHP variables have local scope only.
+          This local scope includes included and required files. For example:</p>
+
+        <code>
+        &lt;?php
+        $a = 1; /* global scope */
+    
+        function Test()
+        {
+          echo $a; /* local scope (not defined) */
+        }
+    
+        Test();
+        ?>
+        </code>
+
+        <p>The below script will print 3. Declaring <code class="inline">$a</code> and <code class="inline">$b</code>
+          global in the function will
+          cause all references to these variables to reference the global version. There is no limit to the number of
+          global variables that can be manipulated by a function.</p>
+        <p>A second way to access variables from the global scope is using the special $GLOBALS array defined by PHP.
+        </p>
+
+        <code>
+        &lt;?php
+        $a = 1;
+        $b = 2;
+      
+        function Sum()
+        {
+          $GLOBALS['b'] = $GLOBALS['a'] + $GLOBALS['b'];
+        }
+      
+        Sum();
+        echo $b;
+        ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="Constants">
+      <header>Constants</header>
+      <article>
+        <p>Constants can be defined using the const keyword, or by using the define()-function. While define() allows a
+          constant to be defined to an arbitrary expression, the const keyword has restrictions as outlined in the next
+          paragraph. Once a constant is defined, it can never be changed or undefined. </p>
+        <p>When using the const keyword, only scalar (bool, int, float and string) expressions and constant arrays
+          containing only scalar expressions are accepted. It is possible to define constants as a resource, but it
+          should be avoided, as it can cause unexpected results. </p>
+        <p>These are the differences between constants and variables: </p>
+
+        <ul>
+          <li>Constants do not have a dollar sign ($) before them;</li>
+          <li>Constants may be defined and accessed anywhere without regard to variable scoping rules;</li>
+          <li>Constants may not be redefined or undefined once they have been set; and</li>
+          <li>Constants may only evaluate to scalar values or arrays.</li>
+        </ul>
+
+        <p>Some examples:</p>
+        <code>
+        &lt;?php
+        define("CONSTANT", "Hello world.");
+        echo CONSTANT; // outputs "Hello world."
+        echo Constant; // Emits an Error: Undefined constant "Constant"
+        // Prior to PHP 8.0.0, outputs "Constant" and issues a warning.
+            
+        // Scalar expression
+        const ANOTHER_CONST = 'some text';
+        const ANIMALS = ['dogs', 'cats', 'ducks'];
+        echo ANOTHER_CONST;
+        ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="If_else_statement">
+      <header>If else statement</header>
+      <article>
+        <p>The if construct is one of the most important features of many languages, PHP included. It allows for
+          conditional execution of code fragments. PHP features an if structure that is similar to that of C.</p>
+        <p>Some examples: </p>
+
+        <code>
+        &lt;?php
+        # if
+        $a = 1;
+        $b = 2;
+
+        // if
+        if ($a > $b)
+          echo "a is bigger than b";
+        
+
+        // if/else 
+        $a = false;
+        $b = true;
+        if ($a){
+          if ($b){
+            echo "b";
+          }else{
+            echo "c";
+          }
+        }
+
+        // elseif/else if 
+        $a = 100;
+        $b = 300;          
+        if ($a > $b) {
+          echo "a is bigger than b";
+        } elseif ($a == $b) {
+          echo "a is equal to b";
+        } else {
+          echo "a is smaller than b";
+        }
+        ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="While_statement">
+      <header>While statement</header>
+      <article>
+        <p>While loops are the simplest type of loop in PHP. They behave just like their C counterparts</p>
+
+        <code>
+        &lt;?php 
+        $i = 1;
+        while ($i &lt;= 10){
+          echo $i;
+          $i++;
+        }
+              
+        $c = 10; 
+        while($c >=10):
+          echo $c; 
+          $c--; 
+        endwhile; 
+        ?>
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <p>All documentation in this page is taken from the official <a href="http://www.php.net">PHP website.</a></p>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>
